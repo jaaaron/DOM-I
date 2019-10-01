@@ -144,3 +144,34 @@ P4Arr[8].innerHTML = siteContent['contact']['email']
 
 // footer
 document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
+
+// turning nav to green
+NavIndex[0].style.color = "green"
+NavIndex[1].style.color = "green"
+NavIndex[2].style.color = "green"
+NavIndex[3].style.color = "green"
+NavIndex[4].style.color = "green"
+NavIndex[5].style.color = "green"
+
+// Utilize `.appendChild()` and `.prepend()` to add 
+// two new items to the navigation system. You can call 
+// them whatever you want.
+const headerEl = document.querySelector('nav')
+const otherHeadline = document.createElement('a')
+otherHeadline.textContent = "Link1"
+otherHeadline.href = "#"
+headerEl.appendChild(otherHeadline)
+
+const otherHeadline1 = document.createElement('a')
+otherHeadline1.textContent = "Link2"
+otherHeadline1.href = "#"
+headerEl.prepend(otherHeadline1)
+
+// stretch goal
+const buttonClick = document.createElement('button')
+buttonClick.textContent = "Lets Go!"
+
+document.querySelector('button').addEventListener("click", bttnClicked)
+function bttnClicked() {
+  document.querySelector('button').prepend(buttonClick)
+}
