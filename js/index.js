@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\n Is \nAwesome\n",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -50,5 +50,97 @@ NavIndex[3].innerText = siteContent.nav["nav-item-4"]
 NavIndex[4].innerText = siteContent.nav["nav-item-5"]
 NavIndex[5].innerText = siteContent.nav["nav-item-6"]
 // cta section
-let ctaLeft = document.getElementsByClassName('cta-text','h1')
-ctaLeft[0].innerText = siteContent.cta["h1"]
+let h1section = document.querySelector('.cta-text h1')
+let subheadline = document.createElement('h1')
+subheadline.innerHTML = "DOM<br>Is <br>Awesome"
+h1section.appendChild(subheadline)
+// cta button
+let buttonLoc = document.querySelector('.cta-text button')
+buttonLoc.innerHTML = siteContent.cta["button"]
+// cta image
+let ctaimg = document.getElementById('cta-img')
+ctaimg.setAttribute('src',siteContent.cta["img-src"])
+/* main-content section */
+// main-content h4
+let mch4 = document.querySelector('.text-content h4')
+let mch4EL = document.createElement('h4')
+mch4EL.innerHTML = siteContent["main-content"]["features-h4"]
+mch4.appendChild(mch4EL)
+// main-content h4 p
+let mch4p = document.querySelector('.text-content p')
+let mch4ELp = document.createElement('p')
+mch4ELp.innerHTML = siteContent["main-content"]["features-content"]
+mch4p.appendChild(mch4ELp)
+// main-content h4 right section
+let h4Arr = document.querySelectorAll('.text-content h4')
+const H4Arr = Array.from(h4Arr)
+let m1ch4 = H4Arr[2]
+let m1ch4EL = document.createElement('h4')
+m1ch4EL.innerHTML = siteContent["main-content"]["about-h4"]
+m1ch4.appendChild(m1ch4EL)
+// main-content h4 p right section
+let pArr = document.querySelectorAll('p')
+const P4Arr = Array.from(pArr)
+
+let m1ch4p = P4Arr[2]
+let m1ch4ELp = document.createElement('p')
+m1ch4ELp.innerHTML = siteContent["main-content"]["about-content"]
+m1ch4p.appendChild(m1ch4ELp)
+
+// center image
+let middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
+
+// bottom left text
+let bttmLeft = H4Arr[3]
+let bttmLeftT = document.createElement('h4')
+bttmLeftT.innerHTML = siteContent["main-content"]["services-h4"]
+bttmLeft.appendChild(bttmLeftT)
+
+// bottom middle text
+let bttmMLeft = H4Arr[4]
+let bttmMLeftT = document.createElement('h4')
+bttmMLeftT.innerHTML = siteContent["main-content"]["product-h4"]
+bttmMLeft.appendChild(bttmMLeftT)
+
+// bottom middle right
+let bttmRight = H4Arr[5]
+let bttmMLeftR = document.createElement('h4')
+bttmMLeftR.innerHTML = siteContent["main-content"]["vision-h4"]
+bttmRight.appendChild(bttmMLeftR)
+
+// bottom p left
+let bttmPleft = P4Arr[3]
+let bttmPleftTxt = document.createElement('p')
+bttmPleftTxt.innerHTML = siteContent["main-content"]["services-content"]
+bttmPleft.appendChild(bttmPleftTxt)
+
+// bottom p middle
+let bttmPmiddle = P4Arr[4]
+let bttmPmiddleTxt = document.createElement('p')
+bttmPmiddleTxt.innerHTML = siteContent["main-content"]["product-content"]
+bttmPmiddle.appendChild(bttmPmiddleTxt)
+
+// bottom p right
+let bttmPright = P4Arr[5]
+let bttmPrightTxt = document.createElement('p')
+bttmPrightTxt.innerHTML = siteContent["main-content"]["vision-content"]
+bttmPright.appendChild(bttmPrightTxt)
+
+/* contact section */
+// h4
+let conSech4 = document.querySelector('.contact h4')
+let conSech4tex = document.createElement('h4')
+conSech4tex.innerHTML = siteContent['contact']['contact-h4']
+conSech4.appendChild(conSech4tex)
+// address
+let conAdd = document.querySelector('.contact p')
+let conAddp = document.createElement('p')
+conAddp.innerHTML = "123 Way 456 Street<br>Somewhere, USA"
+conAdd.appendChild(conAddp)
+
+P4Arr[7].innerHTML = siteContent['contact']['phone']
+P4Arr[8].innerHTML = siteContent['contact']['email']
+
+// footer
+document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
